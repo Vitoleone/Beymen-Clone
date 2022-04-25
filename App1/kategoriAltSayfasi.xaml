@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.kategoriAltSayfasi"
+     
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="#191919"
+             
+             >
+    <ScrollView>
+        
+  
+    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ImageButton
+                                           
+                                            HorizontalOptions="Center"
+                                            Source="spor_cleanup"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            
+                                             Clicked="KadinGiyim"
+                                               ></ImageButton>
+
+            <Label  HeightRequest="50" WidthRequest="200" HorizontalOptions="Start"
+                                       
+                                            BackgroundColor="#F7CCAC"
+                                               VerticalOptions="Center"
+                                            Text="Giyim"
+                                            TextColor="#3A3845"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            FontSize="35"
+                                            Padding="30,0,0,0">
+
+
+
+            </Label>
+
+            <ImageButton
+                                            
+                                            HorizontalOptions="Center"
+                                            Source="kadinAyakkabi"
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            
+                                             Clicked="KadinAyakkabi"
+                                               ></ImageButton>
+
+            <Label  HeightRequest="50" WidthRequest="200" HorizontalOptions="Start"
+                                       
+                                            BackgroundColor="#F7CCAC"
+                                               VerticalOptions="Center"
+                                            Text="Ayakkabı"
+                                            TextColor="#3A3845"
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            FontSize="35"
+                                            Padding="30,0,0,0">
+
+
+
+            </Label>
+
+            <ImageButton
+                                            
+                                            HorizontalOptions="Center"
+                                            Source="canta_cleanup"
+                                            Grid.Row="2"
+                                            Grid.Column="0"
+                                           
+                                             Clicked="KadinCanta"
+                                               ></ImageButton>
+          
+                <Label  HeightRequest="50" WidthRequest="200" HorizontalOptions="Start"
+                                       
+                                            BackgroundColor="#F7CCAC"
+                                               VerticalOptions="Center"
+                                            Text="Çanta"
+                                            TextColor="#3A3845"
+                                            Grid.Row="2"
+                                            Grid.Column="0"
+                                            FontSize="35"
+                                            Padding="30,0,0,0">
+
+
+
+                </Label>
+            
+        
+
+        <ImageButton
+                                           
+                                            HorizontalOptions="Center"
+                                            Source="kadinKolye"
+                                            Grid.Row="3"
+                                            Grid.Column="0"
+                                           
+                                             Clicked="KadinAksesuar"
+                                               ></ImageButton>
+
+
+            <Label  HeightRequest="50" WidthRequest="200" HorizontalOptions="Start"
+                                       
+                                            BackgroundColor="#F7CCAC"
+                                               VerticalOptions="Center"
+                                            Text="Aksesuar"
+                                            TextColor="#3A3845"
+                                            Grid.Row="3"
+                                            Grid.Column="0"
+                                            FontSize="35"
+                                            Padding="30,0,0,0">
+
+
+
+            </Label>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

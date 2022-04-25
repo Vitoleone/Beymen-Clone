@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.KadinUrunSayfasi"
+             BackgroundColor="#F3F1F5">
+
+    <ScrollView>
+            <StackLayout Spacing="0" Padding="5">
+                <Image x:Name="urunResmi" Source="kadin">
+
+                </Image>
+                <StackLayout BackgroundColor="White" Spacing="5">
+                    <Label FontSize="25" Text="Beymen Club" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,0,0"></Label>
+                    <Label  x:Name="urunIsimlbl" FontAttributes="Bold" FontSize="20" Text="Ürün İsmi" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Start" Margin="10,0,0,0"></Label>
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <StackLayout BackgroundColor="Red" Padding="5,5,5,5" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label x:Name="urunIndirimlbl" FontSize="20" Text="-%30" TextColor="White" FontAttributes="Bold"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Spacing="0">
+                            <Label x:Name="urunIndirimsizlbl" TextDecorations="Strikethrough" Text="2000" FontSize="18"></Label>
+                            <Label x:Name="urunIndirimlilbl" FontSize="20" TextColor="Black" FontAttributes="Bold" Text="400 TL"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                <Picker x:Name="renkPicker" Title="Renk" TextColor="Black" TitleColor="Gray" HorizontalOptions="StartAndExpand" WidthRequest="200">
+                    <Picker.Items>
+                        <x:String>Siyah</x:String>
+                        <x:String>Kırmızı</x:String>
+                        <x:String>Mavi</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="bedenPicker" Title="Numara" TitleColor="Gray" HorizontalOptions="EndAndExpand" WidthRequest="200">
+                    <Picker.Items>
+                        <x:String>36</x:String>
+                        <x:String>37</x:String>
+                        <x:String>38</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="White" Margin="0,10,0,10">
+                <Label  FontAttributes="Bold" TextColor="Black" FontSize="20" Text="Özellikler:"></Label>
+                <Label  FontAttributes="Bold" TextColor="#D8D2CB" FontSize="17" Text="deri,bilmemne"></Label>
+                <Label  FontAttributes="Bold" TextColor="Black" FontSize="20" Text="Yıl-Sezon:"></Label>
+                <Label  FontAttributes="Bold" TextColor="#D8D2CB" FontSize="17" Text="2021-Sonbahar/Kış"></Label>
+                <Label  FontAttributes="Bold" TextColor="Black" FontSize="20" Text="Kumaş ve Bakım:"></Label>
+                <Label  FontAttributes="Bold" TextColor="#D8D2CB" FontSize="17" Text="%100 Deri"></Label>
+
+            </StackLayout>
+            
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" WidthRequest="100" HeightRequest="70">
+                <Button  Clicked="SepeteEkle" Margin="0,0,5,0" WidthRequest="300" BackgroundColor="Black" TextColor="White" Text="SEPETE EKLE"></Button>
+                    <Button  Padding="18,0,0,0" BorderWidth="2" BorderColor="Black" ImageSource="https://img.icons8.com/ios-filled/96/000000/filled-like.png" Margin="0,0,0,0" WidthRequest="70" BackgroundColor="White" TextColor="White" Text="SEPETE EKLE"></Button>
+                </StackLayout>
+            
+
+
+        </StackLayout>
+            
+
+
+    </ScrollView>
+
+
+
+
+</ContentPage>

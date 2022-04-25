@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<style name="MainTheme" parent="MainTheme.Base">
+		<!-- Sets Frame element border when selected -->
+		<item name="android:colorActivatedHighlight">@android:color/transparent</item>
+	</style>
+</resources>

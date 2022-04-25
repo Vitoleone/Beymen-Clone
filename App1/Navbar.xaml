@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Navbar"
+            SelectedTabColor="#C0A080"
+            UnselectedTabColor="#F4F4F4"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="#191919"
+            BackgroundColor="#191919"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:local="clr-namespace:App1"
+            CurrentPageChanged="TabbedPage_CurrentPageChanged"
+            
+            >
+    
+    <!--Pages can be added as references or inline-->
+    
+    <ContentPage Title="Anasayfa" IconImageSource="https://img.icons8.com/material/96/000000/home--v5.png">
+        <StackLayout>
+            <AbsoluteLayout HorizontalOptions="Center" Padding="0,10">
+                <Label FontSize="20" HorizontalTextAlignment="Center" TextColor="#F4F4F4" Text="B E Y M E N"/>
+            </AbsoluteLayout>
+            <ScrollView>
+                <StackLayout HorizontalOptions="Fill" Padding="10" Spacing="10">
+                    <!--İlk Carousel Başı-->
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="360"/>
+                            </Grid.RowDefinitions>
+                            
+
+                            <CarouselView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" Margin="0,0,0,0" IsBounceEnabled="True"  ItemsSource="{Binding IlkCarouselView}"
+                      IndicatorView="indicatorView">
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Image Aspect="AspectFit" VerticalOptions="Start" Source="{Binding ilkCarouselImage}" 
+                                       
+                                        />
+
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                            <IndicatorView Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" HorizontalOptions="Center" VerticalOptions="End"   x:Name="indicatorView"  
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="#CC9544"
+                       IndicatorsShape="Circle"
+                       
+                       />
+
+                        </Grid>
+                    </StackLayout>
+                    <!--İlk carousel sonu-->
+
+                    <!--İkinci carousel başı-->
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="360"/>
+                            </Grid.RowDefinitions>
+                            
+                                <CarouselView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" Margin="0" IsBounceEnabled="True" ItemsSource="{Binding IkinciCarouselView}"
+                      IndicatorView="indicatorView2"
+                                          >
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Image Aspect="AspectFill" VerticalOptions="Start" Source="{Binding ikinciCarouselImage}" 
+                                       
+                                        />
+
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                            <IndicatorView Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" VerticalOptions="EndAndExpand"   x:Name="indicatorView2"  
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="#CC9544"
+                       HorizontalOptions="Center"
+                       />
+
+                        </Grid>
+                    </StackLayout>
+                    <!--İkinci carousel sonu-->
+
+                    <!--Üçüncü carousel başı-->
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="360"/>
+                            </Grid.RowDefinitions>
+
+                            <CarouselView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" Margin="0" IsBounceEnabled="True" ItemsSource="{Binding UcuncuCarouselView}"
+                      IndicatorView="indicatorView3"
+                                          >
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+
+                                        <Image Aspect="AspectFill" VerticalOptions="Start" Source="{Binding ucuncuCarouselImage}" 
+                                       
+                                        />
+
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                            <IndicatorView Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" VerticalOptions="EndAndExpand"   x:Name="indicatorView3"  
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="#CC9544"
+                       HorizontalOptions="Center"
+                       />
+
+                        </Grid>
+                    </StackLayout>
+                    <!--Üçüncü carousel sonu-->
+                    <StackLayout>
+                        <Image Aspect="Fill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022108131652231.png"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022311370028927.jpg"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022813343339524.png"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/12gmobil_2022021909075743358.png"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022813345730167.png"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022813353067824.png"/>
+                    </StackLayout>
+
+
+
+
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>   
+    </ContentPage>
+    
+    <ContentPage Title="Arama" IconImageSource="https://img.icons8.com/material-two-tone/96/000000/search.png">
+
+
+        <ContentPage.Content>
+            <StackLayout>
+                <SearchBar Placeholder="Ürün, marka ya da kategori ara"
+                       x:Name="searchBar"
+                       TextChanged="searchBar_TextChanged"
+                       BackgroundColor="LightGray"
+                       Margin="10,10,10,0"/>
+
+                <CollectionView x:Name="myCollectionView"
+                            SelectionChanged="Kadin"
+                            SelectionMode="Single"
+                            ItemsSource="{Binding products}"
+                            
+                            >
+
+
+                    <CollectionView.EmptyView>
+
+                        <ContentView>
+
+                            <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                                <Label Text="Sonuç Bulunamadı."
+                           Margin="10,25,10,10"
+                           TextColor="LightGray"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                        </ContentView>
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+                            <StackLayout Padding="0,0,0,0" >
+                                <Frame BackgroundColor="Transparent"
+                               Padding="0,0,0,0"
+                               CornerRadius="0"
+
+                               >
+                                    <StackLayout>
+
+                                        <Grid HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image HorizontalOptions="Center"
+                                            Source="{Binding Image}"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Margin="10,10,10,0">
+
+                                            </Image>
+
+
+                                            <Label HorizontalOptions="Start"
+                                            VerticalOptions="Center"
+                                            Text="{Binding Name}"
+                                            Margin="10,0,0,0"
+                                            BackgroundColor="#F7CCAC"
+                                            TextColor="#3A3845"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            FontSize="35"
+                                            Padding="30,0,0,0"
+                                            HeightRequest="50"
+                                            WidthRequest="200"/>
+
+                                        </Grid>
+
+                                    </StackLayout>
+
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Padding="0,10,0,0" BackgroundColor="#191919" x:Name="sepet" Title="Sepetim" IconImageSource="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/96/000000/external-shopping-cart-interface-kiranshastry-solid-kiranshastry.png" >
+        
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding sepetUrunler}" x:Name="sepetimUrunler">
+                <CollectionView.EmptyView>
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25" FontAttributes="Bold" TextColor="WhiteSmoke" Text="Sepetiniz Boş">
+                               
+                    </Label> </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <ScrollView x:Name="silinecekUrun">
+                            <StackLayout Spacing="10">
+
+                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
+
+
+                                    <Image Source="{Binding Image}"  VerticalOptions="Center" WidthRequest="120" HeightRequest="200" Margin="0,0,0,0"  />
+                                    <StackLayout>
+
+                                        <StackLayout HorizontalOptions="CenterAndExpand"  Padding="0,14,0,0">
+                                            <Label Text="Beymen Club" TextColor="Black" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="14" TextColor="#D8D2CB" HorizontalOptions="StartAndExpand"></Label>
+
+                                            <Picker Title="Adet" TitleColor="Gray" FontAttributes="Bold" >
+                                                <Picker.Items>
+                                                    <x:String >1</x:String>
+                                                    <x:String >2</x:String>
+                                                    <x:String >3</x:String>
+                                                    <x:String >4</x:String>
+                                                    <x:String >5</x:String>
+                                                    <x:String >6</x:String>
+                                                    <x:String >7</x:String>
+                                                    <x:String >8</x:String>
+                                                    <x:String >9</x:String>
+                                                </Picker.Items>
+                                            </Picker>
+
+
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                                    <Label Text="Beden:" TextColor="Black"></Label>
+                                                    <Label Text="{Binding BedenPicker}" TextColor="Black"></Label>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                                    <Label  Text="Renk:" TextColor="Black" ></Label>
+                                                    <Label Text="{Binding RenkPicker}" TextColor="Black"></Label>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout BackgroundColor="Red" Padding="5,5,5,5" HorizontalOptions="Center" VerticalOptions="Center">
+                                                    <Label FontSize="17" Text="{Binding DiscountedPrice}" TextColor="White" FontAttributes="Bold"></Label>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Vertical" Spacing="0">
+                                                    <Label  TextDecorations="Strikethrough" Text="{Binding Price}" FontSize="15"></Label>
+                                                    <Label  FontSize="17" TextColor="Black" FontAttributes="Bold" Text="{Binding Discount }"></Label>
+
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <Button Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" ScaleX="0.5" ScaleY="0.5" ImageSource="copIcon">
+
+                                    </Button>
+
+
+                                </StackLayout>
+
+
+                                <BoxView HeightRequest="0"></BoxView>
+
+
+                            </StackLayout>
+                        </ScrollView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <AbsoluteLayout x:Name="SepetSatinalButon" HorizontalOptions="CenterAndExpand" >
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                    <Button  WidthRequest="350" Margin="0,0,0,20"  BackgroundColor="White"  TextColor="Black" Text="SATIN AL"></Button>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+
+    </ContentPage>
+    <ContentPage Title="Favorilerim" IconImageSource="https://img.icons8.com/ios-filled/96/000000/filled-like.png">
+
+    </ContentPage>
+    <ContentPage Title="Profilim" IconImageSource="https://img.icons8.com/external-bearicons-glyph-bearicons/96/000000/external-User-essential-collection-bearicons-glyph-bearicons.png">
+
+    </ContentPage>
+
+</TabbedPage>
